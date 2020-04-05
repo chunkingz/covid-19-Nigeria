@@ -13,7 +13,7 @@
 
 <div class="container">
 
-    <h3 class="text-center mt-5 mb-5"><b>DAILY COVID-19 CASE SUMMARY IN NIGERIA 2020</b></h3>
+    <h3 class="text-center mt-5 mb-5"><b>Case Summary in Nigeria as at <span class="text-primary"><span id="month">month</span> <span id="day">day</span></span>, 2020</b></h3>
 
 
     <div class="table-responsive">
@@ -58,6 +58,12 @@
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
 <script type="text/javascript">
+
+let d = new Date();
+const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+document.getElementById("month").innerHTML = months[d.getMonth()];
+document.getElementById("day").innerHTML = d.getDate();
+
 
     $( async() => {
 
